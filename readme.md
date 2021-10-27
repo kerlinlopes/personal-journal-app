@@ -3,7 +3,7 @@
 
 ## Project Summary
 
-Building a Mongo-Express-Liquid-Node (MELN) Application. The tools im using are HTML, CSS, Javascript, Dotenv, Express, Liquid-Express-Views, Method-Override, Mongoose, and Morgan!
+Building a Mongo-Express-Liquid-Node (MELN) Application. The tools used are HTML, CSS, Javascript, Dotenv, Express, Liquid-Express-Views, Method-Override, Mongoose, and Morgan!
 
 ## Models
 
@@ -16,6 +16,11 @@ Journal
  - description: String
  - username: String
 ```
+```
+User
+ - username: {type: String, required: true, unique: true},
+ - password: {type: String, required: true}
+```
 
 ## Route Table
 
@@ -24,7 +29,7 @@ List your routes in a table
 | Route Name | URL | HTTP | Description |
 |-----------|------|-------|-------------|
 | INDEX | /journals | GET | Display all Journal Entires
-| NEW | /journal/new | GET | Show for to make new Journal Entires
+| NEW | /journal/new | GET | Show form to make new Journal Entires
 | CREATE | /journals | POST | Add new Journal Entires to database, then redirect (index)
 | SHOW | /journals/:id | GET | Show information about one Journal Entry
 | EDIT | /journals/:id/edit | GET | Show edit form of one Journal Entry
@@ -32,9 +37,9 @@ List your routes in a table
 | DELETE | /journals/:id | DELETE | Delete a particular Journal Entry, then redirect (index)
 
 ## User Stories
--As a user, I would like to be able to create my own account to log into the app
--As a user, I want to create my own personal entiries or any entries at all
--As a user, I want to be able to edit, update or delete any journal entry I make
+ - As a user, I would like to be able to create my own account to log into the app
+ - As a user, I want to create my own personal entiries or any entries at all
+ - As a user, I want to be able to edit, update or delete any journal entry I make
 
 ## Challenges
 
