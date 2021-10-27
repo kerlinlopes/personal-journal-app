@@ -11,10 +11,9 @@ Models:
 ```
 Journal
  - name: String
+  - date: String
  - topic: String
- - date: String
- - description: String
- - username: String
+ - entry: String
 ```
 ```
 User
@@ -38,7 +37,7 @@ List your routes in a table
 
 ## User Stories
  - As a user, I would like to be able to create my own account to log into the app
- - As a user, I want to create my own personal entiries or any entries at all
+ - As a user, I want to create my own personal entries or any entries at all
  - As a user, I want to be able to edit, update or delete any journal entry I make
 
 ## Challenges
