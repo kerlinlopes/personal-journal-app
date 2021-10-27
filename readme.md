@@ -11,9 +11,10 @@ Models:
 ```
 Journal
  - name: String
-  - date: String
+ - date: String
  - topic: String
  - entry: String
+ - username: String
 ```
 ```
 User

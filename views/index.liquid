@@ -1,0 +1,52 @@
+{% layout "layout.liquid" %} {% block content %}
+<style>
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .signup {
+    color: white;
+    background-color: hotpink;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+  }
+  .login {
+    color: white;
+    background-color: hotpink;
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+  }
+  article {
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    border: 3px solid darkmagenta;
+    border-radius: 25px;
+    margin: 50px;
+    padding: 30px
+}
+p {
+    font-family: 'Patrick Hand', cursive;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    border: 3px solid darkmagenta;
+    border-radius: 25px;
+    margin: 50px;
+    padding: 30px 
+}
+</style>
+
+<div class="buttons">
+  <a href="/user/signup"><button class="signup">Signup</button></a>
+  <a href="/user/login"><button class="login">Login</button></a>
+</div>
+<article>
+  Need to let out your stress but dont want to talk about it? You came to right place! Join our Journal community and begin writing your goals everyday, your problems, your thoughts or just keep a daily log.
+</article>
+<p> “To achieve great things, two things are needed: a plan and not quite enough time.”
+  ―Leonard Bernstein </p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+    <a href="/journals/new"><button>Create a New Journal Entry</button></a>
+    <a href="/user/logout"><button>Logout</button></a>
+    {% for journal in journals %}
+        <article>
+        
+        <a href="/journals/{{ journal._id }}">
+            <h2>
+            {{journal.name}} 
+            </h2>
+        </a>
+</article>
+{% endfor %}
+
+
+</div>
+
+{% endblock %}
