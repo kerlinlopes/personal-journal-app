@@ -5,7 +5,7 @@
 
 Building a Mongo-Express-Liquid-Node (MELN) Application. The tools im using are HTML, CSS, Javascript, Dotenv, Express, Liquid-Express-Views, Method-Override, Mongoose, and Morgan!
 
-## Models11111
+## Models
 
 Models:
 ```
