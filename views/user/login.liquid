@@ -1,18 +1,81 @@
-{% layout "layout.liquid" %}
-{% block content %}
-<div>
-<form action="/user/login" method="post">
-<fieldset>
-<legend>Login</legend>
-<label>
-    Username: <input type="text" name="username" required/> 
-</label>
-<label>
-    Password: <input type="password" name="password" required/>
-</label>
-<input type="submit" value="Login"/>
-</fieldset>
+{% layout "layout.liquid" %} {% block content %}
 
-</form>
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  legend {
+    color: hotpink;
+    font-size: 40px;
+    font-family: "Delius", cursive;
+    text-align: center;
+  }
+  label {
+    color: mediumpurple;
+    font-family: "Delius", cursive;
+    font-size: 30px;
+    text-align: center;
+  }
+  input[type="text"] {
+    height: 50px;
+    width: 400px;
+    border: 3px solid black;
+  }
+  input[type="password"] {
+    height: 50px;
+    width: 400px;
+    border: 3px solid black;
+  }
+  fieldset input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: hotpink;
+    font-size: 20px;
+    font-family: "Patrick Hand", cursive;
+    height: 50px;
+    width: 200px;
+    border: 3px solid black;
+  }
+  /* article {
+    color: hotpink;
+    font-size: 40px;
+    font-family: "Delius", cursive;
+    text-align: center;
+  } */
+  .emojis {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div>
+  <form action="/user/login" method="post">
+
+    <fieldset>
+        <!-- LOGIN BUTTON -->
+      <legend>Login</legend>
+      <!-- USERNAME  -->
+      <label> Username: <input type="text" name="username" required /> </label>
+      <!-- PASSWORD  -->
+      <label>
+        Password: <input type="password" name="password" required />
+      </label>
+      <!-- LOGIN BUTTON  -->
+      <input type="submit" value="Login" />
+    </fieldset>
+
+
+    <span class="emojis">
+    <span style='font-size:100px;'>&#128221;</span>
+    <span style='font-size:100px;'>&#127800;</span>
+    <span style='font-size:100px;'>&#128158;</span>
+    <span style='font-size:100px;'>&#10024;</span>
+    </span>
+
+  </form>
+
 </div>
+
 {% endblock %}

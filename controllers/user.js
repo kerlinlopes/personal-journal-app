@@ -68,8 +68,8 @@ router.post("/login", async (req, res) => {
           // store some data in the session object
           req.session.username = username
           req.session.loggedIn = true
-          // redirect to fruits index page
-          res.redirect("/fruits");
+          // redirect to journals index page
+          res.redirect("/journals");
         } else {
           // send error of wrong password
           res.json({ error: "password doesn't match" });

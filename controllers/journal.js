@@ -32,8 +32,10 @@ router.use((req, res, next) => {
 router.get("/seed", (req, res) => {
     // array of example journals
     const exJournals = [
-        { name: "John Doe", date: " Month - Day - Year", topic: "Topic of your entry", entry: "Your entry goes here" },
-        { name: "Kerlin", date: " 10 - 27 - 2021", topic: "Starting my project", entry: "Im starting my MELN Application project and Im very excited to see my completed project" },
+        { name: "Apple", date: " Month - Day - Year", topic: "topic", entry: "entry" },
+        { name: "Orange", date: " Month - Day - Year", topic: "topic", entry: "entry" },
+        { name: "Peach", date: " Month - Day - Year", topic: "topic", entry: "entry" }
+
       ];
 
     // delete all journals
@@ -49,7 +51,7 @@ router.get("/seed", (req, res) => {
 // index route - get - /journals
 router.get("/", (req, res) => {
     //find all the journals
-    Journal.find({username: req.session.username})
+    Fruit.find({username: req.session.username})
     .then((journals) => {
         // render the index template with the journals
         res.render("journals/index.liquid", {journals})
@@ -71,7 +73,7 @@ router.post("/", (req, res) => {
     // add the username to req.body, to track user
     req.body.username = req.session.username
 
-    // create the new journal
+    // create the new journal entry
     Journal.create(req.body)
     .then((journal) => {
         // redirect the user back to the index route

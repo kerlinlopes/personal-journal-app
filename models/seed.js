@@ -15,8 +15,10 @@ const db = mongoose.connection
 db.on("open", () => {
     // array of example/instruction journals
     const exJournals = [
-        { name: "John Doe", date: " Month - Day - Year", topic: "Topic of your entry", entry: "Your entry goes here" },
-        { name: "Kerlin", date: " 10 - 27 - 2021", topic: "Starting my project", entry: "Im starting my MELN Application project and Im very excited to see my completed project" },
+        { name: "Apple", date: " Month - Day - Year", topic: "topic", entry: "entry" },
+        { name: "Orange", date: " Month - Day - Year", topic: "topic", entry: "entry" },
+        { name: "Peach", date: " Month - Day - Year", topic: "topic", entry: "entry" }
+
       ];
 
     // delete all journals

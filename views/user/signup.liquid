@@ -5,7 +5,6 @@
 div {
     display: flex;
     justify-content: center;
-    align-content: center;
 }
 legend {
     color: hotpink;
@@ -30,6 +29,8 @@ input[type="password"] {
     border: 3px solid black
 } 
 fieldset input[type="submit"] {
+    display: flex;
+    justify-content: center;
     color: white;
     background-color: hotpink;
     font-size: 20px;
@@ -37,7 +38,18 @@ fieldset input[type="submit"] {
     height: 50px;
     width: 200px;
     border: 3px solid black;
+    
 } 
+article {
+    color: hotpink;
+    font-size: 40px;
+    font-family: 'Delius', cursive;
+    text-align: center;
+}
+.emojis {
+    display: flex;
+    justify-content: center;
+}
 </style>
 
 <div>
@@ -54,6 +66,16 @@ fieldset input[type="submit"] {
 <input type="submit" value="Create Account" />
 
 </fieldset>
+
+<article>
+    Your username can be anything! Make it unique and cute to your liking! Creating your own account gives you acces to your personal entries only. Isn't that the reason you came here.... for some privacy 
+</article>
+
+<span class="emojis">
+<span style='font-size:100px;'>&#128521;</span>
+<span style='font-size:100px;'>&#128150;</span>
+<span style='font-size:100px;'>&#127802;</span>
+</span>
 
 </form>
 </div>
