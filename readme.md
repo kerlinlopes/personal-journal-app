@@ -37,13 +37,28 @@ List your routes in a table
 | DELETE | /journals/:id | DELETE | Delete a particular Journal Entry, then redirect (index)
 
 ## User Stories
- - As a user, I would like to be able to create my own account to log into the app
- - As a user, I want to create my own personal entries or any entries at all
- - As a user, I want to be able to edit, update or delete any journal entry I make
+ - User is able to create their own account to log into the My Personal Journal App
+ - User can create their own personal entries or any entries at all
+ - User is be able to edit, update or delete any journal entry they make
 
 ## Challenges
 
-- detail roadblocks and anything you did to overcome whether you did or didn't
+- typos 
+```
+// Register Journals Router
+app.use("/jourals", JournalsRouter)
+```
+- responsive design
+```
+margin-inline: auto;
+width: min(90%, 70.5rem);
+```
+```
+margin: auto
+width: min(90%, 70.5rem);
+```
+- ugly code/ unorganized
+
 
 ## List of Technologies
 
