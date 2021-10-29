@@ -1,21 +1,58 @@
-{% layout "layout.liquid" %}
-{% block content %}
+{% layout "layout.liquid" %} {% block content %}
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  .button1 {
+    color: white;
+    background-color: hotpink;
+    font-size: 20px;
+    font-family: "Patrick Hand", cursive;
+    height: 50px;
+    width: 320px;
+    border: 3px solid white;
+    border-radius: 15px;
+  }
+  .button2 {
+    color: white;
+    background-color: hotpink;
+    font-size: 20px;
+    font-family: "Patrick Hand", cursive;
+    height: 50px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 15px;
+  }
+  article {
+    font-family: "Delius", cursive;
+    display: flex;
+    flex-direction: row;
+  }
+  p {
+    font-size: 40px;
+    color:deeppink;
+    text-decoration: underline;
+  }
+
+</style>
 
 <div>
-    <a href="/journals/new"><button>Create a New Journal Entry</button></a>
-    <a href="/user/logout"><button>Logout</button></a>
+  <fielset>
+    <a href="/journals/new"
+      ><button class="button1">Create a New Journal Entry</button></a
+    >
+    <a href="/user/logout"><button class="button2">Logout</button></a>
+
     {% for journal in journals %}
-        <article>
-        
-        <a href="/journals/{{ journal._id }}">
-            <h2>
-            {{journal.name}} 
-            </h2>
-        </a>
-</article>
-{% endfor %}
-
-
+    <article>
+      <a href="/journals/{{ journal._id }}">
+        <span style="font-size: 60px">&#127826;</span> <p>{{ journal.topic }} </p>
+      </a>
+    </article>
+    {% endfor %}
+  </fielset>
 </div>
 
 {% endblock %}

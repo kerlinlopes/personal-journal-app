@@ -1,6 +1,14 @@
 {% layout "layout.liquid" %} {% block content %}
 <style>
-  .buttons {
+  .button1 {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .button2 {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
     display: flex;
     justify-content: space-evenly;
   }
@@ -8,47 +16,54 @@
     color: white;
     background-color: hotpink;
     font-size: 30px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: "Patrick Hand", cursive;
     height: 50px;
     width: 200px;
+    border-radius: 15px;
+    border: 3px solid white;
   }
   .login {
     color: white;
     background-color: hotpink;
     font-size: 30px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: "Patrick Hand", cursive;
     height: 50px;
     width: 200px;
+    border-radius: 15px;
+    border: 3px solid white;
   }
   article {
-    font-family: 'Patrick Hand', cursive;
+    font-family: "Patrick Hand", cursive;
     color: white;
     text-align: center;
     font-size: 40px;
-    border: 3px solid darkmagenta;
+    border: 3px solid deeppink;
     border-radius: 25px;
     margin: 50px;
-    padding: 30px
-}
-p {
-    font-family: 'Patrick Hand', cursive;
+    padding: 30px;
+  }
+  p {
+    font-family: "Patrick Hand", cursive;
     color: white;
     text-align: center;
     font-size: 40px;
-    border: 3px solid darkmagenta;
+    border: 3px solid deeppink;
     border-radius: 25px;
     margin: 50px;
-    padding: 30px 
-}
+    padding: 30px;
+  }
 </style>
 
-<div class="buttons">
+<div class="button1">
   <a href="/user/signup"><button class="signup">Signup</button></a>
+</div>
+<div class="button2">
   <a href="/user/login"><button class="login">Login</button></a>
 </div>
+
 <article>
-  Need to let out your stress but dont want to talk about it? You came to right place! Join our Journal community and begin writing your goals everyday, your problems, your thoughts or just keep a daily log.
+  Join our Journal community and begin writing your goals everyday, your
+  problems, your thoughts or just keep a daily log.
 </article>
-<p> “To achieve great things, two things are needed: a plan and not quite enough time.”
-  ―Leonard Bernstein </p>
+
 {% endblock %}

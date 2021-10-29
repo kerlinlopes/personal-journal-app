@@ -1,6 +1,0 @@
-//////////////////////////////////
-//FONT ONE
-//////////////////////////////////
-//<linK href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-//font-family: 'Patrick Hand', cursive;
-//////////////////////////////////

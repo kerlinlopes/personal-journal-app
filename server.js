@@ -57,7 +57,7 @@ app.get("/", (req, res) => {
 })
 
 // Register Journals Router
-app.use("/jourals", JournalsRouter)
+app.use("/journals", JournalsRouter)
 
 // Register User Router
 app.use("/user", UserRouter)

@@ -51,7 +51,7 @@ router.get("/seed", (req, res) => {
 // index route - get - /journals
 router.get("/", (req, res) => {
     //find all the journals
-    Fruit.find({username: req.session.username})
+    Journal.find({username: req.session.username})
     .then((journals) => {
         // render the index template with the journals
         res.render("journals/index.liquid", {journals})

@@ -1,6 +1,99 @@
 {% layout "layout.liquid" %}
 {% block content %}
 
-<h1> THIS IS A PAGE</h1>
+<style>
+
+h2 {
+    font-size: 40px;
+    font-family: "Patrick Hand", cursive;
+    text-align: center;
+    color:mediumvioletred;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+
+}
+.topic {
+    text-decoration: underline;
+}
+.date {
+    font-size: 30px;
+    font-family: "Delius", cursive;
+    color:deeppink;
+    text-align: center;
+    border: 3px solid white;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    margin: auto;
+}
+.entry {
+    font-size: 30px;
+    font-family: "Delius", cursive;
+    text-align: center;
+    color: deeppink;
+    margin: auto;
+    
+  }
+  #entry {
+    height: 600px;
+    width: 600px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: auto;
+    width: min(90%, 70.5rem);
+  }
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    color:mediumvioletred;
+    background-color: hotpink;
+    font-size: 25px;
+    font-family: "Delius", cursive;
+    height: 50px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+form input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    color:mediumvioletred;
+    background-color: hotpink;
+    font-size: 25px;
+    font-family: "Delius", cursive;
+    height: 50px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: auto;
+}
+
+</style>
+
+<div>
+<article>
+    <h2> {{journal.name}} </h2>
+    <h3 class="date"> {{journal.date}} </h3>
+    <h2 class="topic"> {{journal.topic}} </h2>
+    <label class="entry">
+        Journal Entry: <br>
+        <textarea class="entry" name="entry" id="entry"> {{journal.entry}} </textarea>
+      </label>
+</article>
+<fieldset> 
+    <a href="/journals/{{ journal._id }}/edit"><button class="button">EDIT ENTRY</button></a>
+
+    <a href="/journals"><button class="button">Back to Main</button></a>
+
+    <form action="/journals/{{ journal._id }}?_method=DELETE" method="post">
+    <input type="submit" value="DELETE">
+    </form>
+
+</div>
 
 {% endblock %}
+

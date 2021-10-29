@@ -1,6 +1,131 @@
-{% layout "layout.liquid" %}
-{% block content %}
+{% layout "layout.liquid" %} {% block content %}
 
-<h1> THIS IS A PAGE</h1>
+<style>
+  legend {
+    color: hotpink;
+    font-size: 40px;
+    font-family: "Delius", cursive;
+    text-align: center;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+  .name {
+    font-size: 40px;
+    font-family: "Patrick Hand", cursive;
+    text-align: center;
+    color: mediumvioletred;
+  }
+  .date {
+    font-size: 30px;
+    font-family: "Delius", cursive;
+    color: deeppink;
+    text-align: center;
+  }
+  .topic {
+    font-size: 40px;
+    font-family: "Patrick Hand", cursive;
+    text-align: center;
+    color: mediumvioletred;
+  }
+  .entry {
+    font-size: 30px;
+    font-family: "Delius", cursive;
+    text-align: center;
+    color: deeppink;
+  }
+  input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: hotpink;
+    font-size: 20px;
+    font-family: "Patrick Hand", cursive;
+    height: 50px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: auto;
+  }
+  #name {
+    height: 50px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+  #date {
+    height: 50px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+  #topic {
+    height: 50px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+  #entry {
+    height: 600px;
+    width: 600px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+</style>
+
+<div>
+  <form action="/journals/{{ journal._id }}?_method=PUT" method="post">
+    <fieldset>
+      <legend>Edit your Journal Entry</legend>
+      <label class="name">
+        Name:
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name here"
+          value="{{ journal.name }}"
+        />
+      </label>
+
+      <label class="date">
+        Date:
+        <input
+          type="text"
+          id="date"
+          name="date"
+          placeholder="MM/DD/YYYY"
+          value="{{ journal.date }}"
+        />
+      </label>
+
+      <label class="topic">
+        Topic:
+        <input
+          type="text"
+          id="topic"
+          name="topic"
+          placeholder="Whats todays topic?"
+          value="{{ journal.topic }}"
+        />
+      </label>
+
+      <label class="entry">
+        Journal Entry: <br />
+        <textarea class="entry" name="entry" id="entry">
+ {{ journal.entry }} </textarea
+        >
+      </label>
+    </fieldset>
+    <input type="submit" value="update {{ journal.topic }}" />
+  </form>
+</div>
 
 {% endblock %}

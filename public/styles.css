@@ -1,9 +1,20 @@
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 body {
     background-color: pink;
 }
 h1 {
     font-family: 'Patrick Hand', cursive;
-    color: white;
+    color:deeppink;
     text-align: center;
     font-size: 90px;
 }
@@ -11,3 +22,4 @@ h1 {
     display: flex;
     justify-content: center;
   }
+
