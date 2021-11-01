@@ -58,6 +58,7 @@ margin: auto
 width: min(90%, 70.5rem);
 ```
 - ugly code/ unorganized
+- Modal pop up box
 
 
 ## List of Technologies
