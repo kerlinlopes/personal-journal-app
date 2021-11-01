@@ -67,6 +67,7 @@ width: min(90%, 70.5rem);
 
 ## Resources 
 - Emoji Unicode Reference: https://www.w3schools.com/charsets/ref_emoji.asp
+- Error Handling: https://www.youtube.com/watch?v=4fvZkV7HAQY&list=PLY6oTPmKnKbZQSCfJLwPcbsH_koOC_F-t&index=12
 - Responsive Styling: https://www.youtube.com/watch?v=bn-DQCifeQQ
 - Modals 4 ways: https://dzone.com/articles/4-ways-to-create-a-modal-popup-box-with-html-css-a
 - Pop up box icon: https://fontawesome.com/v5.15/icons/user-lock?style=solid

@@ -66,33 +66,31 @@ router.post("/login", async (req, res) => {
         const result = await bcrypt.compare(password, user.password);
         if (result) {
           // store some data in the session object
-          req.session.username = username
-          req.session.loggedIn = true
+          req.session.username = username;
+          req.session.loggedIn = true;
           // redirect to journals index page
           res.redirect("/journals");
         } else {
-          // send error of wrong password
-          res.json({ error: "password doesn't match" });
+          res.redirect("/error?error=The%20Passwords%20Dont%20match");
         }
       } else {
-        //send error that user doesn't exist
-        res.json({ error: "user doesn't exist" });
+        res.redirect("/error?error=That%20User%20does%20not%20exist");
       }
     })
     // error handling
-    .catch((error) => {
-      res.json({ error });
-    });
+    // .catch((error) => {
+    //   res.json({ error });
+    // });
 });
 
 // logout route, get request to /user/logout
 router.get("/logout", (req, res) => {
-    // destroy the session
-    req.session.destroy((err) => {
-        // send user back to main page
-        res.redirect("/")
-    })
-})
+  // destroy the session
+  req.session.destroy((err) => {
+    // send user back to main page
+    res.redirect("/");
+  });
+});
 
 ////////////////////////////////
 // export the router

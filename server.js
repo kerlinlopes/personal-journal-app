@@ -62,6 +62,11 @@ app.use("/journals", JournalsRouter)
 // Register User Router
 app.use("/user", UserRouter)
 
+app.get("/error", (req, res) => {
+    const error = req.query.error || "This Page Does Not Exist"
+    res.render("error.liquid", {error})
+})
+
 
 /////////////////////////////////////////////
 // Setup Server Listener
