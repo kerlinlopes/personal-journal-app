@@ -1,69 +1,62 @@
-
 body {
-    background-color: pink;
+  background-color: pink;
 }
 h1 {
-    font-family: 'Patrick Hand', cursive;
-    color:deeppink;
-    text-align: center;
-    font-size: 90px;
+  font-family: "Patrick Hand", cursive;
+  color: deeppink;
+  text-align: center;
+  font-size: 90px;
 }
 .emojis {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
 /* MODAL CSS */
-.btn{
-    /* position: absolute; */
-    margin: auto;
-    width: min(90%, 70.5rem);
-    background: pink;
-    font-size: 20px;
-    color: white;
-    padding: 10px 30px;
-    cursor: pointer;
+.btn {
+  margin: auto;
+  width: min(90%, 70.5rem);
+  background: pink;
+  font-size: 20px;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+}
 
-  }
-  
-  #box{
-    width: 500px;
-    overflow: hidden;
-    background: pink;
-    box-shadow: 0 0 10px black;
-    border-radius: 25px;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    margin: auto;
-    width: min(90%, 70.5rem);
-    z-index: 9999;
-    padding: 10px;
-    text-align: center;
-    display: none;
-  }
-  
-  #box span{
-    color: hotpink;
-    font-size: 40px;
-    display: block;
-    margin: 20px 0;
-  }
-  
-  #box h3{
-    color: white;
-    font-family: "Delius", cursive;
-  }
-  
-  .close{
-    font-size: 18px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    background: deeppink;
-    display: inline-block;
-    border-radius: 20px
-  }
+#box {
+  width: 500px;
+  overflow: hidden;
+  background: pink;
+  box-shadow: 0 0 10px black;
+  border-radius: 25px;
+  margin: auto;
+  width: min(90%, 70.5rem);
+  z-index: 9999;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+#box span {
+  color: hotpink;
+  font-size: 40px;
+  display: block;
+  margin: 20px 0;
+}
+
+#box h3 {
+  color: white;
+  font-family: "Delius", cursive;
+}
+
+.close {
+  font-size: 18px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: deeppink;
+  display: inline-block;
+  border-radius: 20px;
+}
 i {
-    font-size: 30px;
+  font-size: 30px;
 }

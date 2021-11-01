@@ -63,3 +63,9 @@ width: min(90%, 70.5rem);
 ## List of Technologies
 
 -Node JS, Liquid JS, Express, Mongoose/MongoDB
+
+## Resources 
+- Emoji Unicode Reference: https://www.w3schools.com/charsets/ref_emoji.asp
+- Responsive Styling: https://www.youtube.com/watch?v=bn-DQCifeQQ
+- Modals 4 ways: https://dzone.com/articles/4-ways-to-create-a-modal-popup-box-with-html-css-a
+- Pop up box icon: https://fontawesome.com/v5.15/icons/user-lock?style=solid
