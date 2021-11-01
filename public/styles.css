@@ -31,10 +31,12 @@ h1 {
     background: pink;
     box-shadow: 0 0 10px black;
     border-radius: 25px;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    margin: auto;
+    width: min(90%, 70.5rem);
     z-index: 9999;
     padding: 10px;
     text-align: center;
