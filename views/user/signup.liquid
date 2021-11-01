@@ -23,7 +23,6 @@
     border: 3px solid mediumvioletred;
     border-radius: 15px;
     margin-inline: auto;
-
   }
   input[type="password"] {
     height: 50px;
@@ -43,7 +42,7 @@
     width: 200px;
     border: 3px solid white;
     border-radius: 15px;
-    margin: auto;
+    /* margin: auto; */
   }
   article {
     font-family: "Patrick Hand", cursive;
@@ -79,11 +78,19 @@
         Password: <input type="password" name="password" required />
       </label>
       <!-- CREATE BUTTON  -->
-      <input type="submit" value="Create Account" />
+      <!-- <input type="submit" value="Create Account" /> -->
+
+      <input type="submit" class="btn" value="Create Account" onclick="pop()"></input>
+      <div id="box">
+      <i class="fas fa-user-lock"></i>
+      <h3>DON'T FORGET YOUR PASSWORD</h3>
+      <a class="close" onclick="pop()">Close</a>
+    </div>
+
     </fieldset>
 
     <article>
-      Your username can be anything! Don't forget your password!
+      Your username has to be unique! Your password can be anything.
     </article>
 
     <span class="emojis">
